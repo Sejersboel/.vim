@@ -24,23 +24,6 @@ set softtabstop=2
 set expandtab
 set noshiftround
 
-nnoremap <F11> :call ToggleExpandTab()<CR>
-function! ToggleExpandTab()
-  if &expandtab
-    set shiftwidth=8
-    set softtabstop=0
-    set tabstop=8
-    set noexpandtab
-    echo "Tabs are not expanded"
-  else 
-    set shiftwidth=2
-    set softtabstop=2
-    set tabstop=2
-    set expandtab
-    echo "Tabs are expanded"
-  endif
-endfunction
-
 "" Cursor
 set backspace=indent,eol,start
 nnoremap j gj
@@ -50,12 +33,6 @@ nnoremap k gk
 inoremap {<CR> {<CR><CR>}<ESC>ci{
 inoremap "" ""<++><ESC>4hci"
 inoremap ii <ESC>
-
-"" Tabs
-nnoremap tn :tabnew<SPACE>
-
-nnoremap tk :tabnext<CR>
-nnoremap tj :tabprev<CR>
 
 "" Folding
 set foldmethod=indent
@@ -90,26 +67,12 @@ function! ToggleDictionary()
   endif
 endfunction
 
-"" Vim-Plug
 call plug#begin('~/.vim/plugged')
-
-" vim-repeat
 Plug 'https://tpope.io/vim/repeat.git'
-
-
-" vim-indent-object
 Plug 'michaeljsmith/vim-indent-object'
-
-" vim-omnisharp
 Plug 'OmniSharp/Omnisharp-vim'
-
-" ALE
 Plug 'dense-analysis/ale'
-
-" fzf.vim
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
-" vim-sharpenup
 Plug 'nickspoons/vim-sharpenup'
 call plug#end()
