@@ -75,4 +75,11 @@ Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'nickspoons/vim-sharpenup'
+Plug 'https://tpope.io/vim/surround.git'
+Plug 'tpope/vim-commentary'
 call plug#end()
+
+"" Latex rules
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_CompileRule_pdf	= 'pdflatex --shell-escape -interaction=nonstopmode $*'
+
