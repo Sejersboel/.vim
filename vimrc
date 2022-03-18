@@ -2,8 +2,14 @@ set nocompatible
 execute pathogen#infect()
 syntax on
 filetype indent plugin on
-let g:tex_flavor='latex'
 set noswapfile
+
+"""" Environment Variables
+let $RTP=split(&runtimepath, ',')[0]
+let $RC="$HOME/.vim/vimrc"
+
+""""
+
 
 "" line numbers
 set number
@@ -22,10 +28,9 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-set noshiftround
 
 "" Cursor
-set backspace=indent,eol,start
+set backspace=start,eol,indent
 nnoremap j gj
 nnoremap k gk
 
@@ -80,6 +85,7 @@ Plug 'tpope/vim-commentary'
 call plug#end()
 
 "" Latex rules
-let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_CompileRule_pdf	= 'pdflatex --shell-escape -interaction=nonstopmode $*'
+" let g:tex_flavor='latex'
+" let g:Tex_DefaultTargetFormat = 'pdf'
+" let g:Tex_CompileRule_pdf	= 'pdflatex --shell-escape -interaction=nonstopmode $*'
 
