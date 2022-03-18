@@ -1,4 +1,5 @@
 pack/tpope/start/surround
+plugged/
 plugged/Omnisharp-vim
 plugged/ale
 plugged/fzf.vim
