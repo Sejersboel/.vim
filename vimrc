@@ -8,10 +8,8 @@ set noswapfile
 let $RTP=split(&runtimepath, ',')[0]
 let $RC="$HOME/.vim/vimrc"
 
-""""
 
-
-"" line numbers
+" line numbers
 set number
 set relativenumber
 
@@ -39,8 +37,18 @@ inoremap {<CR> {<CR><CR>}<ESC>ci{
 inoremap "" ""<++><ESC>4hci"
 inoremap ii <ESC>
 
+
+"""" netrw configs
+let g:netrw_keepdir = 0
+let g:netrw_liststyle = 3
+let g:netrw_winsize = 30
+let g:netrw_banner = 0
+
+nnoremap ,dd :Lexplore<CR>
+nnoremap ,da :Lexplore %:p:h<CR>
+
 "" Folding
-set foldmethod=indent
+set foldmethod=marker
 set foldnestmax=10
 set foldlevel=1
 
@@ -72,6 +80,8 @@ function! ToggleDictionary()
   endif
 endfunction
 
+
+
 call plug#begin('~/.vim/plugged')
 Plug 'https://tpope.io/vim/repeat.git'
 Plug 'michaeljsmith/vim-indent-object'
@@ -83,9 +93,4 @@ Plug 'nickspoons/vim-sharpenup'
 Plug 'https://tpope.io/vim/surround.git'
 Plug 'tpope/vim-commentary'
 call plug#end()
-
-"" Latex rules
-" let g:tex_flavor='latex'
-" let g:Tex_DefaultTargetFormat = 'pdf'
-" let g:Tex_CompileRule_pdf	= 'pdflatex --shell-escape -interaction=nonstopmode $*'
 
