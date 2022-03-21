@@ -1,5 +1,6 @@
 " Folding
-let comment = "//"
+setlocal comments=://
+setlocal commentstring=//\ %s
 
 
 """" Configure tags
