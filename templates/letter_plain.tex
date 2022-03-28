@@ -17,12 +17,18 @@
 \setkomavar{toname}{<+Til-navn+>}
 \setkomavar{toaddress}{<+Til-addr+>}
 \setkomavar{place}{<+Sted skrevet+>}
-\KOMAoptions{fromphone=<+true/false+>,fromfax=false,fromemail=<+true/false+>}
+\KOMAoptions{fromphone=<+true/false+>,
+fromemail=<+true/false+>,
+addrfield=topaligned,
+foldmarks=false,
+fromalign=right
+fromfax=false}
 \setkomavar{subject}{<+Emne+>}
 
 \begin{document}
 \begin{letter}{}
   \opening{<+Åbningshilsen+>}
+  <++>
 \closing{<+Afslutningshilsen+>}
 \end{letter}
 \end{document}

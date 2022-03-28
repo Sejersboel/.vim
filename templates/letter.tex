@@ -3,7 +3,7 @@
 %     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
 % Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
 %
-\documentclass[a4paper,foldmarks=false,fromalign=right]{scrlttr2}
+\documentclass[a4paper]{scrlttr2}
 \usepackage{lmodern}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -17,12 +17,18 @@
 \setkomavar{toname}{<+Til-navn+>}
 \setkomavar{toaddress}{<+Til-addr+>}
 \setkomavar{place}{Skælskør}
-\KOMAoptions{fromphone=true,fromfax=false,fromemail=true}
+\KOMAoptions{fromphone=true,
+fromfax=false,
+fromemail=true,
+addrfield=topaligned,
+foldmarks=false,
+fromalign=right}
 \setkomavar{subject}{<+Emne+>}
 
 \begin{document}
 \begin{letter}{}
   \opening{<+Åbningshilsen+>}
+  <++>
 \closing{<+Afslutningshilsen+>}
 \end{letter}
 \end{document}
