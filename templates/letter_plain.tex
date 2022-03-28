@@ -1,0 +1,28 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+% Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+\documentclass[a4paper,foldmarks=false,fromalign=right]{scrlttr2}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[danish]{babel}
+\usepackage[pdfpagemode={UseOutlines}, bookmarks,colorlinks, linkcolor={blue}, plainpages=false,  pdfpagelabels,  citecolor={red}]{hyperref}
+
+\setkomavar{fromname}{<+Fra-navn+>}
+\setkomavar{fromaddress}{<+Fra-addr+>}
+\setkomavar{fromemail}{<+Fra-email+>}
+\setkomavar{fromphone}[Tlf.: ]{<+tlfnr+>}
+\setkomavar{toname}{<+Til-navn+>}
+\setkomavar{toaddress}{<+Til-addr+>}
+\setkomavar{place}{<+Sted skrevet+>}
+\KOMAoptions{fromphone=<+true/false+>,fromfax=false,fromemail=<+true/false+>}
+\setkomavar{subject}{<+Emne+>}
+
+\begin{document}
+\begin{letter}{}
+  \opening{<+Åbningshilsen+>}
+\closing{<+Afslutningshilsen+>}
+\end{letter}
+\end{document}

@@ -1,5 +1,4 @@
 """" Compile Options
-let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_FormatDependency_dvi = 'dvi,ps,pdf'
 let g:Tex_CompileRule_dvi= 'latex --shell-escape -interaction=nonstopmode $*'
@@ -22,6 +21,7 @@ let g:Tex_IgnoreLevel = 8
 
 """"Custom F7 commands
 let g:Tex_Com_titleformat = "\\titleformat{<+command+>}{<++>}{0em<++>}{<++>}"
+let g:Tex_CustomTemplateDirectory = '$RTP/templates'
 
 
 """"" Remaps

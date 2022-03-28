@@ -1,0 +1,28 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+% Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+\documentclass[a4paper,foldmarks=false,fromalign=right]{scrlttr2}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[danish]{babel}
+\usepackage[pdfpagemode={UseOutlines}, bookmarks,colorlinks, linkcolor={blue}, plainpages=false,  pdfpagelabels,  citecolor={red}]{hyperref}
+
+\setkomavar{fromname}{Hagbard Folke Sejersbøl Jensen}
+\setkomavar{fromaddress}{Rødkullevej 15\\ 4230 Skælskør}
+\setkomavar{fromemail}{hagbard@hfsj.dk}
+\setkomavar{fromphone}[Tlf.: ]{+45 25306353}
+\setkomavar{toname}{<+Til-navn+>}
+\setkomavar{toaddress}{<+Til-addr+>}
+\setkomavar{place}{Skælskør}
+\KOMAoptions{fromphone=true,fromfax=false,fromemail=true}
+\setkomavar{subject}{<+Emne+>}
+
+\begin{document}
+\begin{letter}{}
+  \opening{<+Åbningshilsen+>}
+\closing{<+Afslutningshilsen+>}
+\end{letter}
+\end{document}

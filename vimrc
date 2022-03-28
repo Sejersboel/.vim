@@ -3,6 +3,9 @@ execute pathogen#infect()
 syntax on
 filetype indent plugin on
 set noswapfile
+set path=.,**,usr/include,,
+
+let g:tex_flavor='latex'
 
 """" Environment Variables
 let $RTP=split(&runtimepath, ',')[0]
@@ -26,6 +29,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+set smartindent
 
 "" Cursor
 set backspace=start,eol,indent

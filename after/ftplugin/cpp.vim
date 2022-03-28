@@ -1,7 +1,7 @@
 " Folding
-setlocal comments=://
 setlocal commentstring=//\ %s
-
+setlocal cindent
+setlocal cinoptions+=g0
 
 """" Configure tags
 setlocal tags+=$RTP/tags/cpp
