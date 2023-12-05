@@ -1,11 +1,13 @@
 """" Compile Options
-let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_FormatDependency_dvi = 'dvi,ps,pdf'
-let g:Tex_CompileRule_dvi= 'latex --shell-escape -interaction=nonstopmode $*'
-let g:Tex_CompileRule_ps = 'dvips -o $*.ps $*.dvi'
-let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
+let g:Tex_DefaultTargetFormat = 'dvi'
+"let g:Tex_FormatDependency_dvi = 'dvi,ps,pdf'
+"let g:Tex_CompileRule_dvi= 'latex --shell-escape -interaction=nonstopmode $*'
+"let g:Tex_CompileRule_ps = 'dvips -o $*.ps $*.dvi'
+"let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
 
-map ,ll :silent call Tex_RunLaTeX()<cr>
+let g:Tex_CompileRule_dvi = 'pdflatex --shell-escape -interaction=nonstopmode $*'
+
+nmap ,ll :!pdflatex --shell-escape %<cr>
 
 let g:Tex_IgnoredWarnings =
 \'Underfull'."\n".
