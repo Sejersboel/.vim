@@ -24,6 +24,7 @@ let g:Tex_IgnoreLevel = 8
 """"Custom F7 commands
 let g:Tex_Com_titleformat = "\\titleformat{<+command+>}{<++>}{0em<++>}{<++>}"
 let g:Tex_CustomTemplateDirectory = '$RTP/templates'
+let g:Tex_Com_href = "\\href{<+url+>}{<+TEXT+>}<++>"
 
 
 """"" Remaps
@@ -31,3 +32,5 @@ vmap ,bf `bf
 nmap ,bf viw`bf
 vmap ,em `em
 nmap ,em viw`em
+
+set textwidth=0
